@@ -6,11 +6,12 @@ name: Pipeline démo
 on: [push]
 
 # Liste des actions qui s'exécutent lors du trigger
-jobs: 
+jobs:
   #nom du job
-  first-job: 
-  # sur quoi le job est executé
-  runs-on: ubuntu-latest
-  #les étapes du process du job
-  steps: 
-    - run: echo "ceci est mon premier job" 
+  first-job:
+    # sur quoi le job est executé
+    runs-on: ubuntu-latest
+    #les étapes du process du job
+    steps:
+      - name: Test de mon premier job
+        run: echo "Ceci est mon premier job"
