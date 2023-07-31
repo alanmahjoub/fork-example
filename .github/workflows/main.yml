@@ -1,0 +1,16 @@
+# Première pipeline
+#Nom de la pipeline
+name: Pipeline démo
+
+# L'event qui doit déclencher la pipeline
+on: [push]
+
+# Liste des actions qui s'exécutent lors du trigger
+jobs: 
+  #nom du job
+  first-job: 
+  # sur quoi le job est executé
+  runs-on: ubuntu-latest
+  #les étapes du process du job
+  steps: 
+    - run: echo "ceci est mon premier job" 
