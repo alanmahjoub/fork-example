@@ -15,3 +15,15 @@ jobs:
     steps:
       - name: Test de mon premier job
         run: echo "Ceci est mon premier job"
+      - name: Affichage de l'id
+        run: echo "id du job ${{github.GITHUB_JOB}}"
+  #nom du job
+  second-job:
+    # sur quoi le job est executé
+    runs-on: ubuntu-latest
+    # dépendance à un autre job
+    needs: first-job
+    #les étapes du process du job
+    steps:
+      - name: Test de mon second job
+        run: echo "Ceci est mon premier job"
